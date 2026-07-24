@@ -8,7 +8,7 @@ int main(){
         hash[s[i] - 'a']++;
     }
     int q;
-    cin >> q;
+    cin >> q;  
     while(q--){
         char c;
         cin>>c;
