@@ -5,7 +5,7 @@ int SecondLargestElement(vector<int> &arr, int n){
     int largest = arr[0];
     for(int i = 0; i<n; i++){
         if(arr[i] > largest){
-            largest=arr[i];
+            largest=arr[i];  
         }
     }
     int secondlargest = -1;
