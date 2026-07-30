@@ -28,20 +28,49 @@
 // }
 
 //------ Better solution using Sum --------->
+//   Better but not the best. 
+// #include <bits/stdc++.h>
+// using namespace std;
+// int Missing(vector<int> &arr, int n) {
+//     int sum = n * (n + 1) / 2;
+//     int arrSum = 0;
+//     for (int i = 0; i < n - 1; i++) {
+//         arrSum += arr[i];
+//     }
+//     return sum - arrSum;
+// }
+// int main() {
+//     int n;
+//     cout << "Enter value of N: ";
+//     cin >> n;
+//     vector<int> arr(n - 1);
+//     cout << "Enter " << n - 1 << " elements: ";
+//     for (int i = 0; i < n - 1; i++) {
+//         cin >> arr[i];
+//     }
+//     int ans = Missing(arr, n);
+//     cout << "Missing number is: " << ans;
+//     return 0;
+// }
+
+//---------- XOR best solution ------------->
 
 #include <bits/stdc++.h>
 using namespace std;
+
 int Missing(vector<int> &arr, int n) {
-    int sum = n * (n + 1) / 2;
-    int arrSum = 0;
+   int xor1 = 0, xor2 = 0;
     for (int i = 0; i < n - 1; i++) {
-        arrSum += arr[i];
+        xor2 ^= arr[i];
+        xor1 ^= (i + 1);
     }
-    return sum - arrSum;
-}
+    xor1 ^= n;
+    return xor1 ^ xor2;
+    }
+
 int main() {
     int n;
-    cout << "Enter value of N: ";
+    cout << "Enter value of n: ";
     cin >> n;
     vector<int> arr(n - 1);
     cout << "Enter " << n - 1 << " elements: ";
