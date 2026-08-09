@@ -1,3 +1,5 @@
+//   BRUTE FORCE SOLUTION
+
 #include<bits/stdc++.h>
 using namespace std;
 
@@ -13,10 +15,7 @@ vector<int> leaders(vector<int> &arr, int n){
         }
         if(leader == true) leaders.push_back(arr[i]);
     }
-    cout<<"Leaders are: ";
-    for(int i = 0; i<leaders.size(); i++){
-        cout<<leaders[i]<<" ";
-    }
+   return leaders;
 }
 
 int main() {
@@ -29,4 +28,8 @@ int main() {
         cin >> arr[i];
     }
    vector<int> ans =  leaders(arr, n);
+    cout<<"Leaders are: ";
+    for(int i = 0; i<ans.size(); i++){
+        cout<<ans[i]<<" ";
+    }
 }
