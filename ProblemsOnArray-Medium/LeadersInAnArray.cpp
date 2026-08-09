@@ -36,8 +36,6 @@
 
 //    Optimal solution - iterating from right side and comparing to the maximum
 
-//   BRUTE FORCE SOLUTION
-
 #include<bits/stdc++.h>
 using namespace std;
 
