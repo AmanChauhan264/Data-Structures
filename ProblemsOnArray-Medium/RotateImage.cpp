@@ -48,18 +48,16 @@
 #include<bits/stdc++.h>
 using namespace std;
 void RotateImage(vector<vector<int>> &arr, int n){
-    for(int i = 0; i<=n-2; i++){
+  
+        for(int i = 0; i<=n-2; i++){
         for(int j = i+1; j<=n-1; j++){
             swap(arr[i][j], arr[j][i]);
         }
     }
-
     for(int i = 0; i<n; i++){
-        for(int j = n-1; j>1; j--){
-            swap(arr[i][n-j-1], arr[i][j]);
-        }
+    reverse(arr[i].begin(), arr[i].end());
     }
-
+    
     cout<<"Rotate matrix is: ";
     cout<<endl;
     for(int i = 0; i<n; i++){
@@ -82,7 +80,7 @@ int main() {
             cin >> arr[i][j];
         }
     }
-    cout << "\nMatrix befor:\n";
+    cout << "\nMatrix before:\n";
     for (int i = 0; i < n; i++) {
         for (int j = 0; j < m; j++) {
             cout << arr[i][j] << " ";
