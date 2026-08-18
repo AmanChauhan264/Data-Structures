@@ -1,3 +1,5 @@
+//  stl for this ->  lb = lower_bound(arr.begin(), arr.end(), n);  this will return an iterator pointing to that index
+
 #include<bits/stdc++.h>
 using namespace std;
 
