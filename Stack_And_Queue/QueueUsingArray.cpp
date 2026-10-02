@@ -32,7 +32,7 @@ class Impleq{
 
     int top(){
         if(currsize == 0){
-            cout<<"Queue has no top because it is empty!";
+            cout<<"Queue has no Top because it is empty!";
             return -1;
         }
         return q[start];
