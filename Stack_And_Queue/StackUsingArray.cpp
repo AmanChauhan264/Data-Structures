@@ -38,10 +38,14 @@ int main(){
     s.push(2);
     s.push(3);
     s.push(4);
+
     cout<<"Top: "<<s.top()<<endl;
+
     s.pop();
     s.pop();
+    
     cout<<"Top: "<<s.top()<<endl;
+
     cout<<"Size: "<<s.size()<<endl;
     return 0;
 }
